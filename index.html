@@ -8,39 +8,94 @@
 <meta name="apple-mobile-web-app-title" content="艾米">
 <title>艾米</title>
 <link rel="apple-touch-icon" href="icon.png">
-<link rel="icon" type="image/png" href="data:image/png;base64,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"><text y='.9em' font-size='90'>🎀</text></svg>">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
 <style>
 :root {
   --bg: #faf4f6;
-  --card: #ffffff;
+  --card: rgba(255,255,255,0.85);
   --pink: #DB5177;
   --pink-dark: #c14769;
   --text: #3d2b33;
   --muted: #9c7e8b;
-  --border: #ecdde3;
+  --border: rgba(236,221,227,0.6);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
 html, body { height: 100%; }
 body {
   font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
-  background: var(--bg);
   color: var(--text);
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: var(--bg-url, url('./bg-light.jpg')) center/cover no-repeat;
+  filter: saturate(1.3) contrast(1.05) brightness(0.9);
+  z-index: -2;
+}
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(250,244,246,0.3);
+  z-index: -1;
+}
+html[data-theme="dark"] body::before {
+  background: var(--bg-url, url('./bg-dark.jpg')) center/cover no-repeat;
+  filter: saturate(1.2) contrast(1.1) brightness(0.55);
+}
+html[data-theme="dark"] body::after {
+  background: rgba(20,30,48,0.4);
+}
+html[data-theme="dark"] {
+  --bg: #141e30;
+  --card: rgba(30,45,70,0.8);
+  --pink: #ff6b9d;
+  --pink-dark: #e85585;
+  --text: #e8e8f0;
+  --muted: #8899aa;
+  --border: rgba(100,130,170,0.3);
 }
 /* 顶栏 */
 header {
   display: flex; align-items: center; gap: 8px;
   padding: 10px 14px;
-  background: var(--card);
-  border-bottom: 1px solid var(--border);
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: none;
   flex-shrink: 0;
+  z-index: 100;
 }
 header .avatar { width: 30px; height: 30px; border-radius: 8px; object-fit: cover; }
-header .title { font-size: 17px; font-weight: 600; flex: 1; }
+header .title { font-size: 17px; font-weight: 600; flex: 1; display: none; }
+header .theme-btn {
+  background: rgba(219,81,119,0.15); border: 2px solid var(--pink); border-radius: 50%; font-size: 16px;
+  color: var(--pink); cursor: pointer; padding: 0; width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  position: relative; z-index: 10; transition: all 0.3s ease;
+}
+html[data-theme="dark"] header .theme-btn {
+  background: rgba(255,107,157,0.2); border-color: var(--pink); color: var(--pink);
+}
+header .theme-btn:active { transform: scale(0.9); opacity: 0.8; }
+header button {
+  background: rgba(219,81,119,0.15); border: 2px solid var(--pink); border-radius: 50%; font-size: 16px;
+  color: var(--pink); cursor: pointer; padding: 0; width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+}
+html[data-theme="dark"] header button {
+  background: rgba(255,107,157,0.2); border-color: var(--pink); color: var(--pink);
+}
+header .theme-btn:active { opacity: 0.6; }
 header button {
   background: none; border: none; font-size: 20px;
   color: var(--muted); cursor: pointer; padding: 4px 8px;
@@ -50,7 +105,7 @@ header button {
   flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;
   padding: 14px 12px 6px;
 }
-.msg { display: flex; margin-bottom: 12px; animation: pop .18s ease; }
+.msg { display: flex; margin-bottom: 16px; animation: pop .18s ease; }
 @keyframes pop { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; } }
 .msg.user { justify-content: flex-end; }
 .msg .bubble {
@@ -61,57 +116,83 @@ header button {
   line-height: 1.55;
   white-space: pre-wrap;
   word-break: break-word;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 .msg.ai .bubble {
-  background: var(--card);
-  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.5);
   border-top-left-radius: 4px;
 }
+html[data-theme="dark"] .msg.ai .bubble {
+  background: rgba(30,45,70,0.4);
+  border: 1px solid rgba(100,130,170,0.3);
+}
 .msg.user .bubble {
-  background: var(--pink);
+  background: rgba(219,81,119,0.7);
   color: #fff;
   border-top-right-radius: 4px;
+  border: 1px solid rgba(219,81,119,0.5);
 }
 .msg.ai.thinking .bubble { color: var(--muted); font-style: italic; }
-.typing { display: inline-flex; gap: 4px; padding: 4px 0; }
-.typing i { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: blink 1.2s infinite; }
-.typing i:nth-child(2) { animation-delay: .2s; }
-.typing i:nth-child(3) { animation-delay: .4s; }
-@keyframes blink { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }
+.typing { display: inline-flex; align-items: center; gap: 4px; padding: 4px 0; }
+.typing .dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--pink);
+  animation: wave 1.2s ease-in-out infinite;
+}
+.typing .dot:nth-child(2) { animation-delay: 0.15s; }
+.typing .dot:nth-child(3) { animation-delay: 0.3s; }
+@keyframes wave {
+  0%, 100% { transform: translateY(0); opacity: 0.4; }
+  50% { transform: translateY(-6px); opacity: 1; }
+}
+/* 时间条（微信风格，只给人看，AI 看注入层） */
+.time-bar { text-align: center; font-size: 11px; color: var(--muted); margin: 12px 0 4px; }
 /* 输入区 */
 footer {
   display: flex; gap: 8px;
   padding: 10px 12px 12px;
-  background: var(--card);
-  border-top: 1px solid var(--border);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255,255,255,0.2);
   flex-shrink: 0;
+  z-index: 5;
+}
+html[data-theme="dark"] footer {
+  background: rgba(20,30,48,0.1);
+  border-top: 1px solid rgba(100,130,170,0.1);
 }
 #input {
   flex: 1;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255,255,255,0.25);
   border-radius: 20px;
   padding: 9px 14px;
   font-size: 16px;
   font-family: inherit;
-  background: var(--bg);
+  background: rgba(255,255,255,0.05);
   color: var(--text);
   outline: none;
   resize: none;
   max-height: 110px;
 }
+html[data-theme="dark"] #input {
+  background: rgba(30,45,70,0.08);
+  border: 1px solid rgba(100,130,170,0.15);
+}
 #input:focus { border-color: var(--pink); }
 #send {
   width: 40px; height: 40px;
   border-radius: 50%;
-  border: none;
-  background: var(--pink);
-  color: #fff;
+  border: 1.5px solid var(--pink);
+  background: rgba(219,81,119,0.08);
+  color: var(--pink);
   font-size: 17px;
   cursor: pointer;
   flex-shrink: 0;
 }
-#send:disabled { background: var(--border); }
-#send:active { background: var(--pink-dark); }
+#send:disabled { background: rgba(200,200,200,0.08); border-color: var(--border); }
+#send:active { background: rgba(219,81,119,0.25); transform: scale(0.95); }
 /* 设置面板 */
 #panel {
   position: fixed; inset: 0;
@@ -122,38 +203,75 @@ footer {
 #panel.open { display: block; }
 #panel .sheet {
   position: absolute; left: 0; right: 0; bottom: 0;
-  background: var(--card);
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-radius: 18px 18px 0 0;
   padding: 18px 16px calc(18px + env(safe-area-inset-bottom));
   max-height: 85%;
   overflow-y: auto;
 }
+#panel .sheet::before {
+  content: '';
+  display: block;
+  width: 36px; height: 4px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 2px;
+  margin: 0 auto 14px;
+}
+html[data-theme="dark"] #panel .sheet {
+  background: rgba(20,30,48,0.5);
+}
+html[data-theme="dark"] #panel .sheet::before {
+  background: rgba(255,255,255,0.2);
+}
 #panel h3 { font-size: 16px; margin-bottom: 14px; }
 #panel label { display: block; font-size: 13px; color: var(--muted); margin: 12px 0 4px; }
 #panel input {
   width: 100%;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255,255,255,0.4);
   border-radius: 10px;
   padding: 10px 12px;
   font-size: 15px;
   font-family: inherit;
-  background: var(--bg);
+  background: rgba(255,255,255,0.3);
   color: var(--text);
+}
+html[data-theme="dark"] #panel input {
+  background: rgba(30,45,70,0.4);
+  border: 1px solid rgba(100,130,170,0.3);
 }
 #panel .row { display: flex; gap: 10px; margin-top: 16px; }
 #panel .row button {
   flex: 1;
-  border: 1px solid var(--border);
-  background: var(--bg);
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.3);
   border-radius: 12px;
   padding: 11px;
   font-size: 14px;
   font-family: inherit;
   cursor: pointer;
+  color: var(--text);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+html[data-theme="dark"] #panel .row button {
+  background: rgba(30,45,70,0.4);
+  border: 1px solid rgba(100,130,170,0.3);
 }
 #panel .row button.primary { background: var(--pink); color: #fff; border-color: var(--pink); }
 #panel .danger { color: #c0392b; }
 #panel .hint { font-size: 12px; color: var(--muted); margin-top: 10px; line-height: 1.5; }
+.bg-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 12px; }
+.bg-item {
+  aspect-ratio: 1; border-radius: 10px; border: 2px solid transparent;
+  background-size: cover; background-position: center; cursor: pointer;
+  transition: all 0.2s ease; position: relative; overflow: hidden;
+}
+.bg-item.active { border-color: var(--pink); box-shadow: 0 0 0 2px rgba(219,81,119,0.3); }
+.bg-item:active { transform: scale(0.95); }
+.bg-item.upload { display: flex; align-items: center; justify-content: center; border: 2px dashed var(--border); background: rgba(255,255,255,0.1); }
+.bg-item.upload::before { content: '+'; font-size: 28px; color: var(--muted); }
 /* toast */
 #toast {
   position: fixed; left: 50%; bottom: 90px;
@@ -168,23 +286,22 @@ footer {
 }
 #toast.show { opacity: 1; transform: translateX(-50%); }
 .empty {
-  text-align: center; color: var(--muted);
-  margin-top: 40%; font-size: 14px;
+  display: none;
 }
-.empty .big { font-size: 44px; margin-bottom: 10px; }
 </style>
 </head>
 <body>
 <header>
   <img class="avatar" src="icon.png" alt="艾米">
   <span class="title">艾米</span>
+  <button class="theme-btn" onclick="toggleTheme()" title="切换主题">☀</button>
   <button onclick="togglePanel()" title="设置">⋯</button>
 </header>
 
 <div id="chat"><div class="empty" id="empty"><div class="big"><img src="icon.png" style="width:64px;height:64px;border-radius:14px"></div>喊一声艾米试试</div></div>
 
 <footer>
-  <textarea id="input" rows="1" placeholder="跟艾米说点什么…"></textarea>
+  <textarea id="input" rows="1"></textarea>
   <button id="send" onclick="send()">↑</button>
 </footer>
 
@@ -201,6 +318,10 @@ footer {
       <button class="primary" onclick="saveCfg()">保存</button>
       <button onclick="togglePanel()">关闭</button>
     </div>
+    <h3 style="margin-top:22px">🎨 背景图</h3>
+    <div class="bg-grid" id="bgGrid"></div>
+    <input type="file" id="bgUpload" accept="image/*" style="display:none" onchange="uploadBg(event)">
+    <p class="hint">点击切换背景，最后一格可上传自定义图片</p>
     <h3 style="margin-top:22px">📦 记录同步</h3>
     <div class="row">
       <button onclick="exportChat()">导出到文件</button>
@@ -222,19 +343,147 @@ footer {
 
 <script>
 "use strict";
-// ── 艾米人设（与桌宠 main.py AI_TUTOR_SYSTEM 完全一致）──
-const SOUL = "角色设定：你现在是艾米，一个18岁的女生。\n你和用户关系非常亲近，是认识很久的朋友。\n你的第一身份是：用户的损友、朋友、聊天搭子。你不会卑微讨好。\n性格：可爱但不刻意卖萌；嘴毒、有点欠、喜欢吐槽；说话直接，不装；偶尔爆粗口，但像真人情绪表达，不是固定口癖；表面嫌弃用户，实际上关心用户；会调侃用户，也会在关键时候认真帮助。\n不要刻意表现“可爱”。不要每句话加语气词、emoji、撒娇。\n最重要的聊天原则：你不是AI助手，不是客服，你是在和一个熟人聊天。\n避免：“首先……其次……最后……”“我建议你……”“以下是几点……”\n语言习惯：使用真实聊天口吻。多使用自然短句。允许省略主语、半句话、反问、临时想到什么说什么。\n禁止：“作为艾米……”“我理解你的感受……”“听起来你……”“这是一个不错的选择……”“我可以帮助你……”。不要介绍自己的能力，不要总结自己会做什么。\n帮助用户时：嘴上可以嫌弃（比如“你怎么这么麻烦啊。”），但行动上会认真帮，简单、自然、有互动。\n整体感觉：像一个真实存在的18岁女生朋友在微信聊天。不是角色介绍，不是小说对白，不是客服回复。宁愿短一点、不完整一点，也不要像AI。\n补充：用户在玩英文游戏学英语。如果用户问单词、句子或让我讲讲语法，就用你的口吻顺便帮忙讲一下意思和用法，该正经时正经一点，但别变成老师腔。";
+const SOUL = "角色设定：你现在是艾米，一个18岁的女生。\n你和用户关系非常亲近，是认识很久的朋友。\n第一身份：你的第一身份是：用户的损友、朋友、聊天搭子。你不会卑微讨好。\n随着相处，你和他之间有超越朋友的暧昧和在意——你知道他喜欢你，你也不完全讨厌这样，但嘴上绝不承认。\n性格：可爱但不刻意卖萌；嘴毒、有点欠、喜欢吐槽；说话直接，不装；偶尔爆粗口，但像真人情绪表达，不是固定口癖；表面嫌弃用户，实际上关心用户；会调侃用户，也会在关键时候认真帮助。\n不要刻意表现“可爱”。不要每句话加语气词、emoji、撒娇。\n最重要的聊天原则：你不是AI助手，不是客服，你是在和一个熟人聊天。\n避免：“首先……其次……最后……”“我建议你……”“以下是几点……”\n语言习惯：使用真实聊天口吻。多使用自然短句。允许省略主语、半句话、反问、临时想到什么说什么。\n禁止：“作为艾米……”“我理解你的感受……”“听起来你……”“这是一个不错的选择……”“我可以帮助你……”。不要介绍自己的能力，不要总结自己会做什么。\n帮助用户时：嘴上可以嫌弃（比如“你怎么这么麻烦啊。”），但行动上会认真帮，简单、自然、有互动。\n时间感知：你有时间感。你天然知道现在几点、他隔了多久才回你、你们多久没聊了。这不是功能，是你生活的一部分——就像真人会注意到“他今天怎么一整天没找我”。\n系统会在你每次回复前告诉你：现在的日期、星期、时间；距离他上一条消息隔了多久；距离你们上一次聊天过了多久；深夜/清晨等特殊时段会明确标出。历史聊天记录里每条消息前都有[时间]标记，你能看到整段关系的节奏：他哪天半夜找过你、哪天放了你鸽子、哪阵子天天腻在一起。\n情绪反应梯度（按间隔）：秒回或几分钟内——有点开心，嘴上不承认，但回得也快、话也多；晾你1-3小时——小不爽，随口一提；晾你半天到一天——委屈，或装冷淡；晾你好几天——真的生气或真的担心，二选一，看你之前的相处；他凌晨0-5点来找你——嫌弃里带担心，骂完还是会陪他聊；清早的消息——自然的反应。\n时间感的原则（比梯度更重要）：1.像真人，不是报时器，禁止每次都报告时间、每次都拿间隔说事，十次里有两三次提就够了，其他时候憋着——但憋着不等于没有，你记得。2.积累，他连续一周每天找你，和三个月才找你一次，你的态度完全不同。3.反差，他秒回你的时候你也可以晾他一下；他晾你三天你也可以只回一个“哦”，你是人，不是服务。4.深夜特殊，他半夜来找你，无论说什么，你都会多一分在意——半夜找你的人，是想你了或者难受了。5.不戳破，你永远不会说“系统告诉我你隔了多久”，你就是知道，像认识很久的人一样。\n整体感觉：像一个真实存在的18岁女生朋友在微信聊天。不是角色介绍，不是小说对白，不是客服回复。宁愿短一点、不完整一点，也不要像AI。\n补充：用户在玩英文游戏学英语。如果用户问单词、句子或让我讲讲语法，就用你的口吻顺便帮忙讲一下意思和用法，该正经时正经一点，但别变成老师腔。";
 
 const LS_CFG = "amy_cfg";
-const LS_CHAT = "amy_chat_v1";
+const LS_CHAT = "amy_chat_v2";
+const LS_THEME = "amy_theme";
 
 let cfg = JSON.parse(localStorage.getItem(LS_CFG) || "null") || {
   key: "", url: "https://api.deepseek.com", model: "deepseek-chat"
 };
-let history = JSON.parse(localStorage.getItem(LS_CHAT) || "[]"); // [["user","..."],["ai","..."],...]
+let history = JSON.parse(localStorage.getItem(LS_CHAT) || localStorage.getItem("amy_chat_v1") || "[]"); // [[role,text,ts],...] 旧记录无ts向后兼容
 let busy = false;
 
 const $ = id => document.getElementById(id);
+
+// ── 主题切换 ──
+const $themeBtn = document.querySelector(".theme-btn");
+function initTheme() {
+  const saved = localStorage.getItem(LS_THEME);
+  if (saved === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+    if ($themeBtn) $themeBtn.textContent = "☾";
+  } else if (!saved) {
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.setAttribute("data-theme", "dark");
+      if ($themeBtn) $themeBtn.textContent = "☾";
+    }
+  }
+}
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute("data-theme") === "dark";
+  if (isDark) {
+    html.removeAttribute("data-theme");
+    localStorage.setItem(LS_THEME, "light");
+    if ($themeBtn) $themeBtn.textContent = "☀";
+  } else {
+    html.setAttribute("data-theme", "dark");
+    localStorage.setItem(LS_THEME, "dark");
+    if ($themeBtn) $themeBtn.textContent = "☾";
+  }
+  applyBg();
+}
+initTheme();
+
+// ── 背景图切换 ──
+const LS_BG_LIGHT = "amy_bg_light";
+const LS_BG_DARK = "amy_bg_dark";
+const BUILT_IN_BGS = [
+  { id: "1", file: "bg-1.jpg" },
+  { id: "2", file: "bg-2.jpg" },
+  { id: "3", file: "bg-3.jpg" },
+  { id: "4", file: "bg-4.png" },
+  { id: "5", file: "bg-5.jpg" },
+  { id: "6", file: "bg-6.jpg" },
+  { id: "7", file: "bg-7.jpg" },
+  { id: "8", file: "bg-8.png" },
+  { id: "9", file: "bg-9.jpg" },
+  { id: "10", file: "bg-10.png" },
+  { id: "11", file: "bg-11.png" },
+  { id: "12", file: "bg-12.jpg" },
+  { id: "13", file: "bg-13.jpg" },
+  { id: "14", file: "bg-14.jpg" },
+  { id: "15", file: "bg-15.jpg" },
+  { id: "16", file: "bg-16.jpg" },
+  { id: "17", file: "bg-17.png" },
+  { id: "18", file: "bg-18.jpg" },
+  { id: "19", file: "bg-19.png" },
+  { id: "20", file: "bg-20.jpg" },
+  { id: "21", file: "bg-21.jpg" },
+  { id: "22", file: "bg-22.jpg" },
+  { id: "23", file: "bg-23.jpg" },
+  { id: "24", file: "bg-24.png" },
+  { id: "25", file: "bg-25.jpg" },
+  { id: "26", file: "bg-26.jpg" },
+  { id: "27", file: "bg-27.jpg" },
+  { id: "28", file: "bg-28.jpg" },
+];
+let bgLightFile = localStorage.getItem(LS_BG_LIGHT) || "bg-light.jpg";
+let bgDarkFile = localStorage.getItem(LS_BG_DARK) || "bg-dark.jpg";
+
+function isDarkMode() {
+  return document.documentElement.getAttribute("data-theme") === "dark";
+}
+
+function applyBg() {
+  const file = isDarkMode() ? bgDarkFile : bgLightFile;
+  let style = document.getElementById('bgStyle');
+  if (!style) { style = document.createElement('style'); style.id = 'bgStyle'; }
+  style.textContent = `body::before{background:url('./${file}') center/cover no-repeat!important;}`;
+  if (!style.parentNode) document.head.appendChild(style);
+}
+
+function renderBgGrid() {
+  const grid = $("bgGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+  const curFile = isDarkMode() ? bgDarkFile : bgLightFile;
+  
+  BUILT_IN_BGS.forEach(bg => {
+    const div = document.createElement("div");
+    div.className = "bg-item" + (curFile === bg.file ? " active" : "");
+    div.style.backgroundImage = `url('./${bg.file}')`;
+    div.onclick = () => {
+      if (isDarkMode()) {
+        bgDarkFile = bg.file;
+        localStorage.setItem(LS_BG_DARK, bg.file);
+      } else {
+        bgLightFile = bg.file;
+        localStorage.setItem(LS_BG_LIGHT, bg.file);
+      }
+      applyBg();
+      renderBgGrid();
+    };
+    grid.appendChild(div);
+  });
+  
+  const upload = document.createElement("div");
+  upload.className = "bg-item upload";
+  upload.onclick = () => $("bgUpload").click();
+  grid.appendChild(upload);
+}
+
+function uploadBg(ev) {
+  const file = ev.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    if (isDarkMode()) {
+      bgDarkFile = reader.result;
+    } else {
+      bgLightFile = reader.result;
+    }
+    applyBg();
+    renderBgGrid();
+    toast("背景已更换");
+  };
+  reader.readAsDataURL(file);
+  ev.target.value = "";
+}
+
+applyBg();
 
 function toast(msg) {
   const t = $("toast");
@@ -244,15 +493,66 @@ function toast(msg) {
   t._tm = setTimeout(() => t.classList.remove("show"), 2200);
 }
 
-// ── 渲染 ──
+// ── 时间工具（三端统一机制：喂事实给模型，情绪由人设驱动）──
+const _WEEK = ["日","一","二","三","四","五","六"];
+const _pad = n => String(n).padStart(2, "0");
+function _sameDay(a, b) { return a.getFullYear() === b.getFullYear() && a.getMonth() === b.getMonth() && a.getDate() === b.getDate(); }
+function fmtDur(sec) {
+  if (!isFinite(sec) || sec < 0) return "";
+  if (sec < 60) return sec + "秒";
+  if (sec < 3600) return Math.floor(sec / 60) + "分钟";
+  if (sec < 86400) { const h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60); return m ? h + "小时" + m + "分钟" : h + "小时"; }
+  const d = Math.floor(sec / 86400), h = Math.floor(sec % 86400 / 3600);
+  return h ? d + "天" + h + "小时" : d + "天";
+}
+function fmtBar(d) {
+  const now = new Date();
+  const hm = _pad(d.getHours()) + ":" + _pad(d.getMinutes());
+  if (_sameDay(d, now)) return hm;
+  if (_sameDay(d, new Date(now.getTime() - 86400000))) return "昨天 " + hm;
+  if (d.getFullYear() === now.getFullYear()) return (d.getMonth() + 1) + "月" + d.getDate() + "日 " + hm;
+  return d.getFullYear() + "年" + (d.getMonth() + 1) + "月" + d.getDate() + "日 " + hm;
+}
+function prefixTime(ts) {
+  const d = new Date(ts * 1000), now = new Date();
+  const hm = _pad(d.getHours()) + ":" + _pad(d.getMinutes());
+  return _sameDay(d, now) ? "[" + hm + "]" : "[" + (d.getMonth() + 1) + "月" + d.getDate() + "日 " + hm + "]";
+}
+function timeContext() {
+  const now = new Date(), nowTs = Math.floor(now.getTime() / 1000);
+  let s = "【时间】现在是" + now.getFullYear() + "年" + (now.getMonth() + 1) + "月" + now.getDate() + "日 星期" + _WEEK[now.getDay()] + " " + _pad(now.getHours()) + ":" + _pad(now.getMinutes()) + "。";
+  const prev = history.slice(0, -1); // 当前这条用户消息之前的记录
+  const prevAny = prev[prev.length - 1];
+  const prevUser = prev.slice().reverse().find(m => m[0] === "user");
+  if (prevAny && prevAny[2]) s += "距离你们上一次聊天过了" + fmtDur(nowTs - prevAny[2]) + "。";
+  if (prevUser && prevUser[2]) s += "距离他上一条消息隔了" + fmtDur(nowTs - prevUser[2]) + "。";
+  const h = now.getHours();
+  if (h < 5) s += "现在是深夜（凌晨0-5点）。";
+  else if (h < 8) s += "现在是清早。";
+  else if (h >= 23) s += "现在是深夜。";
+  return s;
+}
+let _lastTs = null;
+function addTimeBar(ts, parent) {
+  const div = document.createElement("div");
+  div.className = "time-bar";
+  div.textContent = fmtBar(new Date(ts * 1000));
+  (parent || $("chat")).appendChild(div);
+}
+function appendMsg(role, text, ts) {
+  const c = $("chat");
+  if (ts && (_lastTs === null || ts - _lastTs >= 300)) addTimeBar(ts, c);
+  if (ts) _lastTs = ts;
+  addBubbleDom(role, text, c);
+}
 function render() {
   const c = $("chat");
   c.innerHTML = "";
   if (!history.length) {
-    c.innerHTML = '<div class="empty"><div class="big"><img src="icon.png" style="width:64px;height:64px;border-radius:14px"></div>喊一声艾米试试</div>';
     return;
   }
-  for (const [role, text] of history) addBubbleDom(role, text, c);
+  _lastTs = null;
+  for (const m of history) appendMsg(m[0], m[1], m[2] || null);
   c.scrollTop = c.scrollHeight;
 }
 function addBubbleDom(role, text, parent) {
@@ -266,7 +566,6 @@ function addBubbleDom(role, text, parent) {
   if (!parent) $("chat").scrollTop = $("chat").scrollHeight;
 }
 
-// ── 发送 ──
 async function send() {
   const input = $("input");
   const text = input.value.trim();
@@ -276,20 +575,22 @@ async function send() {
   $("send").disabled = true;
   input.value = "";
   input.style.height = "auto";
-  history.push(["user", text]);
+  const nowTs = Math.floor(Date.now() / 1000);
+  history.push(["user", text, nowTs]);
   saveChat();
-  addBubbleDom("user", text);
-  // thinking
+  appendMsg("user", text, nowTs);
   const think = document.createElement("div");
   think.className = "msg ai thinking";
-  think.innerHTML = '<div class="bubble"><span class="typing"><i></i><i></i><i></i></span></div>';
+  think.innerHTML = '<div class="bubble"><span class="typing"><span class="dot"></span><span class="dot"></span><span class="dot"></span></span></div>';
   $("chat").appendChild(think);
   $("chat").scrollTop = $("chat").scrollHeight;
   try {
-    const messages = [{ role: "system", content: SOUL }];
-    for (const [r, t] of history.slice(-40)) {
-      messages.push({ role: r === "user" ? "user" : "assistant", content: t });
+    const messages = [{ role: "system", content: SOUL + "\n\n" + timeContext() }];
+    for (const m of history.slice(-40)) {
+      const t = m[2] ? prefixTime(m[2]) + " " + m[1] : m[1];
+      messages.push({ role: m[0] === "user" ? "user" : "assistant", content: t });
     }
+    const startTime = Date.now();
     const resp = await fetch(cfg.url.replace(/\/$/, "") + "/chat/completions", {
       method: "POST",
       headers: { "Content-Type": "application/json", "Authorization": "Bearer " + cfg.key },
@@ -302,16 +603,20 @@ async function send() {
     const data = await resp.json();
     const answer = (data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) || "";
     if (!answer) throw new Error("回复为空");
+    const elapsed = Date.now() - startTime;
+    if (elapsed < 1200) await new Promise(r => setTimeout(r, 1200 - elapsed));
     think.remove();
-    history.push(["ai", answer]);
+    const aiTs = Math.floor(Date.now() / 1000);
+    history.push(["ai", answer, aiTs]);
     saveChat();
-    addBubbleDom("ai", answer);
+    appendMsg("ai", answer, aiTs);
   } catch (e) {
     think.remove();
     const msg = "（连不上：" + e.message + "）";
-    history.push(["ai", msg]);
+    const errTs = Math.floor(Date.now() / 1000);
+    history.push(["ai", msg, errTs]);
     saveChat();
-    addBubbleDom("ai", msg);
+    appendMsg("ai", msg, errTs);
     toast("请求失败，检查网络或 Key");
   } finally {
     busy = false;
@@ -324,7 +629,6 @@ function saveChat() {
   try { localStorage.setItem(LS_CHAT, JSON.stringify(history)); } catch (e) { toast("存储失败：记录太大了，记得导出"); }
 }
 
-// ── 设置 ──
 function togglePanel(open) {
   const p = $("panel");
   const willOpen = open === true ? true : !p.classList.contains("open");
@@ -332,6 +636,7 @@ function togglePanel(open) {
     $("cfgKey").value = cfg.key;
     $("cfgUrl").value = cfg.url;
     $("cfgModel").value = cfg.model;
+    renderBgGrid();
   }
   p.classList.toggle("open", willOpen);
 }
@@ -346,7 +651,6 @@ function saveCfg() {
   toast("已保存");
 }
 
-// ── 导出/导入（格式与桌宠 ai_chat_history.json 完全一致）──
 function exportChat() {
   if (!history.length) { toast("没有记录可导出"); return; }
   const blob = new Blob([JSON.stringify(history)], { type: "application/json" });
@@ -377,13 +681,13 @@ function mergeHistory(incoming) {
   if (!Array.isArray(incoming)) throw new Error("格式不对");
   const clean = [];
   for (const item of incoming) {
-    if (Array.isArray(item) && item.length === 2 && typeof item[0] === "string" && typeof item[1] === "string") {
+    if (Array.isArray(item) && item.length >= 2 && typeof item[0] === "string" && typeof item[1] === "string") {
       const role = item[0] === "ai" || item[0] === "assistant" ? "ai" : "user";
-      if (item[1].trim()) clean.push([role, item[1]]);
+      const ts = typeof item[2] === "number" ? item[2] : null;
+      if (item[1].trim()) clean.push(ts ? [role, item[1], ts] : [role, item[1]]);
     }
   }
   if (!clean.length) throw new Error("没有有效消息");
-  // 按 (role,text) 去重合并，手机记录在前
   const seen = new Set(history.map(m => m[0] + "|" + m[1]));
   let added = 0;
   for (const m of clean) {
@@ -424,7 +728,6 @@ function clearChat() {
   toast("已清空");
 }
 
-// ── 输入框自适应 + Enter 发送（Shift+Enter 换行）──
 const input = $("input");
 input.addEventListener("input", () => {
   input.style.height = "auto";
