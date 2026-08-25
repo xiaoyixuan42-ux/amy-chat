@@ -350,15 +350,18 @@ html[data-theme="dark"] #panel .row button {
 if (window.visualViewport) {
   const _vv = window.visualViewport;
   const _kick = () => {
-    // body 高度 = 当前可见高度：键盘弹出时=键盘上方，收起时=全屏（无需判断）
-    document.body.style.height = _vv.height + 'px';
-    // iOS 强制把页面顶上去时拉回来（消除底部白框）
-    if (_vv.offsetTop > 0) window.scrollTo(0, 0);
-    const c = document.getElementById('chat');
-    if (c) c.scrollTop = c.scrollHeight;
+    const kb = window.innerHeight - _vv.height;
+    if (kb > 50) {
+      document.body.style.height = _vv.height + 'px';
+      document.querySelector('footer').style.paddingBottom = '2px';
+      const c = document.getElementById('chat');
+      if (c) c.scrollTop = c.scrollHeight;
+    } else {
+      document.body.style.height = '';
+      document.querySelector('footer').style.paddingBottom = '';
+    }
   };
   _vv.addEventListener('resize', _kick);
-  _vv.addEventListener('scroll', _kick);
   document.getElementById('input').addEventListener('focus', () => setTimeout(_kick, 300));
   document.getElementById('input').addEventListener('blur', () => setTimeout(_kick, 100));
 }
