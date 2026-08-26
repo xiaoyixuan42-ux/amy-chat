@@ -20,36 +20,18 @@
   --border: rgba(236,221,227,0.6);
 }
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-}
+html, body { height: 100%; height: 100dvh; }
 body {
   font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
   color: var(--text);
-}
-#app {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
-  box-sizing: border-box;
+  position: relative;
 }
-html.kb-open #app {
-  padding-bottom: 0 !important;
-}
+html.kb-open body { padding-bottom: 0; }
 body::before {
   content: '';
   position: fixed;
@@ -310,7 +292,6 @@ html[data-theme="dark"] #panel .row button {
 </style>
 </head>
 <body>
-<div id="app">
 <header>
   <img class="avatar" src="icon.png" alt="艾米">
   <span class="title">艾米</span>
@@ -366,26 +347,29 @@ html[data-theme="dark"] #panel .row button {
 <div id="toast"></div>
 
 <script>
-// ── iOS 键盘终极适配：动态锁定 #app 容器为 visualViewport 视口，杜绝空白缝与位移撕裂 ──
+// iOS 键盘适配：精准对齐 visualViewport 底边，杜绝空隙
 (function () {
   const _vv = window.visualViewport;
+  if (!_vv) return;
   const _docEl = document.documentElement;
-  const _app = document.getElementById('app') || document.body;
+  const _footer = document.querySelector('footer');
   const _chat = document.getElementById('chat');
   const _input = document.getElementById('input');
-  const _send = document.getElementById('send');
   let _ticking = false;
 
   function _sync() {
     _ticking = false;
-    if (!_vv) return;
-    window.scrollTo(0, 0);
-    const winH = window.innerHeight;
-    const isKb = (_vv.height < winH - 60) || (_vv.offsetTop > 0);
-    _docEl.classList.toggle('kb-open', isKb);
-    _app.style.height = _vv.height + 'px';
-    _app.style.top = (_vv.offsetTop || 0) + 'px';
-    if (isKb && _chat) {
+    // 计算 footer 底部在视口中的实际位置与 visualViewport 底部的差值
+    const footerRect = _footer.getBoundingClientRect();
+    const currentTranslate = parseFloat((_footer.style.transform.match(/translateY\((-?[0-9.]+)px\)/) || [])[1] || 0);
+    const unadjustedBottom = footerRect.bottom - currentTranslate;
+    const visibleBottom = _vv.offsetTop + _vv.height;
+    const overlap = Math.max(0, Math.round(unadjustedBottom - visibleBottom));
+    const open = overlap > 0;
+    
+    _docEl.classList.toggle('kb-open', open);
+    _footer.style.transform = open ? 'translateY(-' + overlap + 'px)' : '';
+    if (open && _chat) {
       _chat.scrollTop = _chat.scrollHeight;
     }
   }
@@ -397,25 +381,21 @@ html[data-theme="dark"] #panel .row button {
     }
   }
 
-  if (_vv) {
-    _vv.addEventListener('resize', _queue);
-    _vv.addEventListener('scroll', _queue);
-  }
+  _vv.addEventListener('resize', _queue);
+  _vv.addEventListener('scroll', _queue);
   window.addEventListener('resize', _queue);
   window.addEventListener('orientationchange', _queue);
-  if (_input) {
-    _input.addEventListener('focus', () => {
-      setTimeout(_sync, 50);
-      setTimeout(_sync, 260);
-    });
-    _input.addEventListener('blur', () => {
-      setTimeout(_sync, 50);
-      setTimeout(_sync, 260);
-    });
-  }
-  if (_send) {
-    _send.addEventListener('pointerdown', function (e) { e.preventDefault(); });
-  }
+  _input.addEventListener('focus', () => {
+    _queue();
+    setTimeout(_sync, 60);
+    setTimeout(_sync, 250);
+  });
+  _input.addEventListener('blur', () => {
+    _queue();
+    setTimeout(_sync, 60);
+    setTimeout(_sync, 250);
+  });
+  document.getElementById('send').addEventListener('pointerdown', function (e) { e.preventDefault(); });
   _sync();
 })();
 "use strict";
@@ -955,6 +935,5 @@ document.addEventListener("keydown", e => {
 
 render();
 </script>
-</div>
 </body>
 </html>
